@@ -10,8 +10,12 @@ app.get("/",(req,res)=>{
     res.sendfile("index.html");
 })
 
-app.get("about",(req,res)=>{
+app.get("/about",(req,res)=>{
     res.sendfile("about.html");
+})
+
+app.get("/message",(req,res)=>{
+    res.sendfile("message.html");
 })
 
 app.post("/postMessage",(req,res)=>{
