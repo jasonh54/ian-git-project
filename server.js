@@ -5,7 +5,11 @@ app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({urlencoded:true}))
 
 app.get("/",(req,res)=>{
-    res.send("Hello!")
+    res.sendfile("index.html");
+})
+
+app.get("about",(req,res)=>{
+    res.sendfile("about.html");
 })
 
 app.post("/postMessage",(req,res)=>{
